@@ -1,6 +1,7 @@
 from flask import Flask,request,render_template,jsonify
 import numpy as np
 
+import os
 import pandas
 import sklearn
 import pickle
@@ -121,5 +122,10 @@ def ferti():
 
     return render_template('ferti.html')
 
+# if __name__ == "__main__":
+#     app.run(debug=True)
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Use the PORT environment variable if available
+    app.run(host="0.0.0.0", port=port, debug=True)
+
