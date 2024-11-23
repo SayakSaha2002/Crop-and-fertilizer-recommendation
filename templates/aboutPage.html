@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_about.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- Navigation menu with links to different pages (Home, About, Crop Prediction, Fertilizer Prediction) -->
+    <nav>
+        <ul class="navbar">
+            <li><a href="/" class="navbar-link">Home</a></li>
+            <li><a href="/aboutPage" class="navbar-link">About Us</a></li>
+            <li><a href="/ferti" class="navbar-link">Fertilizer Prediction</a></li>
+            <li><a href="/crop" class="navbar-link">Crop Prediction</a></li>
+        </ul>
+    </nav>
+
+    <!-- header section -->
+    <section class="header">
+        <div class="sub-head row1">
+            <div class="head-container col1">
+                <div class="logo">
+                    <!-- Logo Image -->
+                    <img src="{{ url_for('static', filename='css/images/crop-img.jpg') }}" alt="" height="60px" width="60px">
+                </div>
+                <div class="logo-title">
+                    <p>ABOUT US</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- cards -->
+    <section class="card-container">
+        <div class="card">
+            <!-- card title -->
+            <div class="job-title">
+                <h1>AGRICULTURE IN CROPS</h1>
+                <span class="spacer"></span>
+                <span class="company">CROPLIFE</span>
+            </div>
+            <!-- card description -->
+            <div class="desc-container">
+                <div class="sub-desc sd1">
+                    <div class="title">DESCRIPTION</div>
+                    <div class="content">
+                        <p> Agriculture in crops, commonly referred to as crop farming or arable farming, 
+                            is a fundamental aspect of agriculture that involves cultivating plants for food, fiber, fuel, and other purposes. 
+                            It plays a crucial role in feeding the world's population, providing raw materials for various industries, 
+                            and supporting livelihoods in rural communities.
+                            Large-scale farming aimed at producing crops and livestock for sale and profit.
+                            Industrial Agriculture involves high levels of synthetic fertilizers and pesticides to maximize productivity.
+                        </p>
+                    </div>
+                    <div class="sal">
+                        <h4>CROPS</h4>
+                        <span>Food crops, include grains(wheat,rice,corn), vegetables, fruits,
+                            Cash crops such as tea, coffee, cotton, 
+                            Industrial crops like rubber and sugarcane, Oil crops include oil seeds
+                            like soybean, sunflower and other biofuels.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="sub-desc sd2">
+                    <div class="title">REQUIREMENTS</div>
+                    <div class="content">
+                        <ul>
+                            <li>TEMPERATURE</li>
+                            <li>RAINFALL</li>
+                            <li>SOIL TYPE</li>
+                            <li>SUNLIGHT</li>
+                            <li>PH-LEVEL</li>
+                            <li>NUTRIENTS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <!-- card title -->
+            <div class="job-title">
+                <h1>AGRICULTURE IN FEED</h1>
+                <span class="spacer"></span>
+                <span class="company">FERTILIZER INNOVATION</span>
+            </div>
+            <!-- card description -->
+            <div class="desc-container">
+                <div class="sub-desc sd1">
+                    <div class="title">DESCRIPTION</div>
+                    <div class="content">
+                        <p>Fertilizers play a critical role in modern agriculture by supplying essential nutrients to crops,
+                            improving soil fertility, and increasing yields. They help replace nutrients that crops remove from the 
+                            soil and address specific nutrient deficiencies, making them a cornerstone of crop production worldwide.
+                            Types of Fertilizers in Agriculture: 
+                            Organic Fertilizers (Derived from natural sources such as plant and animal matter.)
+                            Inorganic (Synthetic) Fertilizers (Manufactured through industrial processes, providing precise concentrations of nutrients).
+                        </p>
+                    </div>
+                    <div class="sal">
+                        <h4>ESSENTIAL NUTRIENTS</h4>
+                        <span>Macronutrients (Nitrogen (N), Phosphorus (P), Potassium (K)), Secondary nutrients (Calcium (Ca), Magnesium (Mg), Sulfur (S)), Micronutrients (Iron (Fe), Zinc (Zn), Copper (Cu))</span>
+                    </div>
+                </div>
+
+                <div class="sub-desc sd2">
+                    <div class="title">REQUIREMENTS</div>
+                    <div class="content">
+                        <ul>
+                            <li>SOIL TESTING</li>
+                            <li>SOIL PH</li>
+                            <li>NPK RATIO</li>
+                            <li>ORGANIC MATTER CONTENT</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <section class="footer">
+        <div class="wrapper">
+            <div class="flex-box">
+                <ul>
+                    <li><a href="#">OFFICIAL REQUIREMENTS</a></li>
+                    <li><a href="#">LEARN ABOUT US</a></li>
+                    <li><a href="#">APPLICATION</a></li>
+                </ul>
+            </div>
+            <hr>
+            <div class="flex-box right">
+                <ul>
+                    <li><a href="#"><p>EMAIL <span>XXXXXXXX@gmail.com</span></p></a></li>
+                    <li><a href="#"><p>PHONE <span>3942809482039</span></p></a></li>
+                    <li><p>SOCIAL</p><span id="icon-container">
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                        </ul>
+                    </span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript to highlight the active page in the navbar
+        document.querySelectorAll('.navbar-link').forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+</body>
+
+</html>

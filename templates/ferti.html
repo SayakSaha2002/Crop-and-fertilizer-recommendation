@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fertilizer Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_fertilizer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_navigation.css') }}">
+</head>
+<body>
+
+            <!-- Navigation menu with links to different pages (Home, About, Crop Prediction, Fertilizer Prediction) -->
+            <ul>
+                <li><a href="/aboutPage">About Us</a></li>
+                <li><a class="active" href="/ferti">Fertilizer Prediction</a></li>
+                <li><a class="active" href="/crop">Crop Prediction</a></li>
+                <li><a class="active" href="/">Home</a></li>
+            </ul>
+
+
+<!-- 
+    <a href="/" class="back-to-home">Back to Home</a> -->
+    <section class="header">
+        <!-- sub headers -->
+        <div class="sub-head row1">
+            <div class="head-container col1">
+                <div class="logo">
+                    <img src="{{ url_for('static', filename='css/images/ferti-logo.jpeg') }}" alt="" height="60px" width="80px">
+                </div>
+                <div class="logo-title">
+                    <p>CULTIVATE<br> SUCCESS
+                    </p>
+                </div>
+            </div>
+    <main>
+
+
+
+
+        <form id="fertilizerForm" method="POST">
+           <b> <label for="n">Nitrogen (N):</label></b>
+            <input type="number" id="n" name="n" required>
+            
+            <b><label for="p">Phosphorus (P):</label></b>
+            <input type="number" id="p" name="p" required>
+            
+            <b> <label for="k">Potassium (K):</label> </b>
+            <input type="number" id="k" name="k" required>
+            
+           <b> <label for="ph">pH Level:</label> </b>
+            <input type="number" step="0.01" id="ph" name="ph" required>
+            
+           <b> <label for="rainfall">Rainfall (mm):</label> </b>
+            <input type="number" id="rainfall" name="rainfall" required>
+            
+           <b> <label for="temperature">Temperature (°C):</label> </b>
+            <input type="number" id="temperature" name="temperature" required>
+
+            <b> <label for="crop_name">Crop :</label></b>
+           
+           <select name="crop_name" id="crop_name" style="width: 30%; padding: 8px; 
+           margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;" required>
+                <option value="">Select Crop Name</option>
+                <option value="Sugarcane">Sugarcane</option>
+                <option value="Jowar">Jowar</option>
+                <option value="Cotton">Cotton</option>
+                <option value="Rice">Rice</option>
+                <option value="Wheat">Wheat</option>
+                <option value="Groundnut">Groundnut</option>
+                <option value="Maize">Maize</option>
+                <option value="Tur">Tur</option>
+                <option value="Urad">Urad</option>
+                <option value="Moong">Moong</option>
+                <option value="Gram">Gram</option>
+                <option value="Masoor">Masoor</option>
+                <option value="Soybean">Soybean</option>
+                <option value="Ginger">Ginger</option>
+                <option value="Turmeric">Turmeric</option>
+                <option value="Grapes">Grapes</option>
+            </select>
+            
+            
+          <div class="button-container">
+            <button type="submit">RECOMANDATION</button>
+          </div>
+        </form>
+
+<!-- Popup for displaying predicted fertilizer -->
+<div id="overlay"></div>
+<div class="popup" id="popupMessage">
+    <button class="close-btn" onclick="closePopup()">×</button>
+    <p id="popupText"></p>
+    <img id="popupImage" src="" alt="fertilizer Image" style="display: none; max-width: 100%; margin-top: 20px;">
+</div>
+
+</main>
+
+    <!-- Link to external JavaScript -->
+    <script src="{{ url_for('static', filename='javascript/script_ferti.js') }}"></script>
+    
+</body>
+</html>
