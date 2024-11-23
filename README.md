@@ -1,1 +1,0 @@
-# Crop-and-fertilizer-recommendation
