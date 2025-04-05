@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us!</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style_about.css') }}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style_navigation.css') }}"
+    />
+  </head>
+
+  <body>
+    <!-- <script src="static\javascript\script_nav.js"></script> -->
+    <!-- xxxx -->
+    <ul>
+      <li><a href="/aboutPage">About Us</a></li>
+      <li><a href="/ferti">Fertilizer Prediction</a></li>
+      <li><a href="/crop">Crop Prediction</a></li>
+      <li><a href="/">Home</a></li>
+    </ul>
+
+    <!-- xxxx -->
+
+    <div id="about">
+      <h1>About Us</h1>
+    </div>
+
+    <div id="crop">
+      <div class="sub-head">What our Crop Prediction do ?</div>
+      <p>
+        Our Crop Prediction platform leverages advanced technology, including
+        the XGBoost machine learning algorithm, to help farmers make smarter
+        decisions. This tool is designed to guide farmers in predicting the best
+        crop to grow based on factors like soil quality, weather, rainfall, and
+        other environmental conditions. By providing accurate crop
+        recommendations, the platform not only ensures better farming practices
+        but also boosts productivity and profitability. With this tool, farmers
+        can minimize risks, optimize resources, and make informed choices,
+        leading to sustainable agriculture and a thriving business.
+      </p>
+    </div>
+
+    <div id="fert">
+      <div class="sub-head">What our Fertilizer Prediction do ?</div>
+      <p>
+        Our Fertilizer Recommendation System provides precise guidance to
+        farmers by analyzing soil nutrient levels (N, P, K) and pH, combined
+        with the selected crop type. This advanced tool ensures that farmers use
+        the right type and amount of fertilizer, promoting optimal crop growth
+        while reducing unnecessary expenses. By encouraging efficient fertilizer
+        usage, the system not only minimizes costs but also helps maintain soil
+        health, reduces environmental impact, and ensures higher crop yields at
+        competitive prices. Designed for accuracy and ease of use, this solution
+        empowers farmers to achieve sustainable and profitable agriculture.
+      </p>
+    </div>
+
+    <div class="dev">
+      Developed By : <strong>Group 11</strong> ( Under the guidance of
+      <b>Prof. Ashoktaru Pal</b> )<br />
+      <span id="fiem">Future Institute of Engineering and Management</span> <br>
+
+      Members : <br />
+      <div style="margin-left: 20px;margin-top: 10px; font-size: 15px;">
+        Sayak Saha <br />
+        Md Akram<br />
+        Abhishek Sagar<br />
+        Kankana Bose<br />
+        Priyanka Karmakar<br />
+      </div>
+    </div>
+
+    <!-- <div style="height: 100px;width: 100%; background-color: black;margin-top: auto; margin-bottom: -200px;">sdcsdsdvsdv</div> -->
+
+    <!-- <script>
+      // JavaScript to highlight the active page in the navbar
+      document.querySelectorAll(".navbar-link").forEach((link) => {
+        if (link.href === window.location.href) {
+          link.classList.add("active");
+        }
+      });
+    </script> -->
+  </body>
+</html>

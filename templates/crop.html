@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crop Prediction</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style_crop.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style_navigation.css') }}"
+    />
+  </head>
+  <body>
+    <!-- Navigation menu with links to different pages (Home, About, Crop Prediction, Fertilizer Prediction) -->
+    <ul>
+      <li><a href="/aboutPage">About Us</a></li>
+      <li><a class="active" href="/ferti">Fertilizer Prediction</a></li>
+      <li><a class="active" href="/crop">Crop Prediction</a></li>
+      <li><a class="active" href="/">Home</a></li>
+    </ul>
+
+    <!-- <header>
+        <div class="marquee">
+      <marquee>  <h1>Crop Prediction System</h1> </marquee></div>
+    </header> -->
+    <!-- <a href="/" class="back-to-home">Back to Home</a> -->
+
+    <div id="head_crop">Predict Your Perfect Crop</div>
+
+
+
+
+
+
+    <main>
+      <form id="cropForm" action="/crop" method="POST">
+        <div class="soil">
+          <b> <label for="soil_color">Soil-Colour:</label></b>
+          <select id="soil_color" name="soil_color" style="border-radius: 4px;" required>
+            <option value="">Select Soil Colour</option>
+            <option value="Black">Black</option>
+            <option value="Dark Brown">Dark Brown</option>
+            <option value="Light Brown">Light Brown</option>
+            <option value="Medium Brown">Medium Brown</option>
+            <option value="Red">Red</option>
+            <option value="Reddish Brown">Reddish Brown</option>
+          </select>
+        </div>
+
+        <b>
+          <label for="n"
+            >Nitrogen (N) (enter values between 20 and 150):</label
+          ></b
+        >
+        <input type="number" id="n" name="n" min="20" max="150" required />
+
+        <b
+          ><label for="p"
+            >Phosphorus (P) (enter values between 10 and 90):</label
+          ></b
+        >
+        <input type="number" id="p" name="p" min="10" max="90" required />
+
+        <b>
+          <label for="k">Potassium (K) (enter values between 5 and 150):</label>
+        </b>
+        <input type="number" id="k" name="k" min="5" max="150" required />
+
+        <b>
+          <label for="ph">pH Level (enter values between 5.50 and 8.50):</label>
+        </b>
+        <input
+          type="number"
+          step="0.01"
+          id="ph"
+          name="ph"
+          min="5.50"
+          max="8.50"
+          required
+        />
+
+        <b>
+          <label for="rainfall"
+            >Rainfall (mm) (enter values between 300 and 1700):</label
+          >
+        </b>
+        <input
+          type="number"
+          step="0.01"
+          id="rainfall"
+          name="rainfall"
+          min="300"
+          max="1700"
+          required
+        />
+
+        <b>
+          <label for="temperature"
+            >Temperature (°C) (enter values between 10 and 40):</label
+          >
+        </b>
+        <input
+          type="number"
+          step="0.01"
+          id="temperature"
+          name="temperature"
+          min="10"
+          max="40"
+          required
+        />
+        <!-- Predict Button -->
+        <b>
+          <label
+            ><button type="submit">
+              <strong>Predict Crop </strong
+              ><img
+                src="\static\images\fast-forward.png"
+                alt="arrow"
+                height="22px"
+                width="32px"
+              /></button></label
+        ></b>
+      </form>
+
+      <!-- Popup for displaying predicted crop -->
+      <div id="overlay"></div>
+      <div class="popup" id="popupMessage">
+        <button class="close-btn" onclick="closePopup()">×</button>
+        <p id="popupText"></p>
+        <img
+          id="popupImage"
+          src=""
+          alt="Crop Image"
+          style="display: none; max-width: 100%; margin-top: 20px"
+        />
+      </div>
+    </main>
+
+    <!-- Link to external JavaScript -->
+    <script src="{{ url_for('static', filename='javascript/script_crop.js') }}"></script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    
+    <!-- Including Bootstrap CSS for styling and responsiveness -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS for animations and styling, linked from the static folder -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_home_ani.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_navigation.css') }}">
+</head>
+<body>
+
+    <!-- Navigation menu with links to different pages (Home, About, Crop Prediction, Fertilizer Prediction) -->
+    <ul>
+        <li><a href="/aboutPage">About Us</a></li>
+        <li><a class="active" href="/ferti">Fertilizer Prediction</a></li>
+        <li><a class="active" href="/crop">Crop Prediction</a></li>
+        <li><a class="active" href="/">Home</a></li>
+    </ul>
+
+    <!-- Full-screen background video container -->
+    <div class="video-container">
+        <!-- Video that will autoplay, muted and looped for background effect -->
+        <video autoplay muted loop id="background-video">
+            <source src="{{ url_for('static', filename='videos/video1.mp4') }}" type="video/mp4">
+            <!-- Message if the browser does not support the video tag -->
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Overlay content with welcome message and description -->
+        <div class="content">
+            <!-- Main heading with a welcoming message, styled with Bootstrap -->
+            <b><h1 class="c1 display-4 ">Welcome to Crop and Fertilizer Prediction</h1></b>
+            <!-- Subtitle with brief description, also styled with Bootstrap -->
+            <b><p class="c2 lead ">Helping farmers make informed decisions</p></b>
+            <!-- Button that could lead to the prediction section (currently commented out) -->
+            <!-- <a href="#predict" class="btn btn-primary btn-lg">Get Started</a> -->
+        </div>
+    </div>
+
+    <!-- jQuery for Bootstrap compatibility -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    
+    <!-- Popper.js for Bootstrap tooltips and popovers -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    
+    <!-- Bootstrap JavaScript for interactivity (modals, tooltips, etc.) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

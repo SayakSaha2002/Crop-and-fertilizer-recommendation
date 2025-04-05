@@ -1,0 +1,59 @@
+/* Set background image for the body */
+body {
+    background-image: url('/static/images/agri_field.jpg'); /* Replace with the correct path to your image */
+    background-size: cover; /* Ensure the image covers the entire screen */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    font-family: Arial, sans-serif; /* Optional: Set a default font for the page */
+    color: #fff; /* Set text color to white for contrast with background */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 100px;
+    /* height: 100vh; */
+}
+
+#about{
+    color: black;
+    text-align: center;
+    margin-top: 28px;
+}
+
+.sub-head{
+    font-size: 30px;
+    font-weight: 400;
+    color: rgb(118, 3, 3);
+    padding-top: 10px;
+}
+
+#crop{
+    color: black;
+    font-size: 20px;
+    display: block;
+    padding: 0px 40px;
+    text-shadow: 2px 2px 4px #ffffff;
+}
+
+#fert{
+    color: black;
+    font-size: 20px;
+    display: block;
+    padding: 0px 40px;
+    text-shadow: 2px 2px 4px #ffffff;
+    
+}
+
+.dev{
+    color: rgb(255, 226, 226);
+    font-size: 17px;
+    display: block;
+    padding: 20px 40px;
+    text-shadow: 2px 2px 4px #080707;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#fiem{
+    color: blue;
+    text-shadow: 2px 2px 2px #000000;
+    font-size: 23px;
+    font-weight: 700;
+}

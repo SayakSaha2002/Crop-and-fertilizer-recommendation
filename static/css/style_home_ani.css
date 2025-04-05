@@ -1,0 +1,64 @@
+/* General body and html styles for full screen and no overflow */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Styling for the video container */
+.video-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* Styles for the background video to ensure full coverage */
+#background-video {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+}
+
+/* Styling for the content on top of the video */
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: black;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Custom styles for the primary button */
+/* .btn-primary {
+    background-color: #ff4081;
+    border-color: #ff4081;
+} */
+
+/* Hover effect for the primary button */
+/* .btn-primary:hover {
+    background-color: #ff79b0;
+    border-color: #ff79b0;
+} */
+
+.c1{
+    text-shadow: 2px 2px 2px #160202;
+    font-weight: 400;
+}
+
+.c2{
+    text-shadow: 4px 4px 4px #000;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.5);
+}

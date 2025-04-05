@@ -1,0 +1,189 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background: url('images/wheat.jpg') no-repeat center center fixed; */
+    background-size: cover;
+    background-color: rgb(160, 205, 98);
+}
+
+/* header {
+    background-color: transparent;
+    color: green;
+    text-align: center;
+    padding: 1em 0;
+} */
+
+#head_crop{
+    font-size: 30px;
+    font-weight: 700;
+    padding: 30px 30px 0px;
+}
+
+main {
+    padding: 0px 10px;
+    background: transparent;
+    margin: 0px 20px;
+    border-radius: 10px;
+}
+
+form {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: transparent;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input {
+    width: 50%;
+    padding: 8px;
+    /* margin-bottom: 10px; */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #008000;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: larger;
+    display: flex;
+}
+button:hover {
+    background-color: #075707;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.soil {
+    
+    width: 50.5%;
+    padding: 3px;
+    
+}
+
+
+select {
+    width:101%;
+    padding: 7px;
+    font-size: 16px;
+}
+
+.back-to-home {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: #008CBA; /* Blue background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .back-to-home:hover {
+    background-color: #005f73; /* Darker blue on hover */
+  }
+
+
+/* Marquee using CSS animation */
+/* .marquee h1 {
+    animation: scroll 10s linear infinite;
+} */
+
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+ /* Popup styling */
+.popup {
+    display: none;
+    position: fixed;
+    top: 47%;
+    left: 76%;
+    width: 485px;
+    height: auto;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popup p {
+    margin: 10px 0 0;
+    font-size: 18px;
+}
+
+.popup .close-btn {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+/* Optional: Add a hover effect for the close button */
+.popup .close-btn:hover {
+    color: #ffcc00; /* Change color on hover for better visibility */
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/* Image styling within the popup */
+.popup img {
+    width: 100%; /* Makes the image cover the popup width */
+    height: 100%; /* Makes the image cover the popup height */
+    object-fit: cover; /* Ensures the image doesn't stretch, maintains aspect ratio */
+    border-radius: 8px;
+    margin-top: 20px;
+}
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    form > div {
+        flex: 1 1 100%; /* Form fields will take up the full width on small screens */
+    }
+
+    /* input, select {
+        width: 50%;
+    } */
+
+    .popup {
+        width: 80%;
+    }
+}

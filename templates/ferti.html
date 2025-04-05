@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fertilizer Prediction</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style_fertilizer.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style_navigation.css') }}"
+    />
+  </head>
+  <body>
+    <!-- Navigation menu with links to different pages (Home, About, Crop Prediction, Fertilizer Prediction) -->
+    <ul>
+      <li><a href="/aboutPage">About Us</a></li>
+      <li><a class="active" href="/ferti">Fertilizer Prediction</a></li>
+      <li><a class="active" href="/crop">Crop Prediction</a></li>
+      <li><a class="active" href="/">Home</a></li>
+    </ul>
+
+    <main>
+      <form id="fertilizerForm" method="POST">
+        <!-- <b> <label for="rainfall">Rainfall (mm):</label> </b>
+            <input type="number" id="rainfall" name="rainfall" required>
+            
+           <b> <label for="temperature">Temperature (°C):</label> </b>
+            <input type="number" id="temperature" name="temperature" required> -->
+
+        <div id="head_fert">Predict Your Perfect Fertilizer</div>
+
+        <strong> <label for="crop_name">Crop :</label></strong>
+
+        <select
+          name="crop_name"
+          id="crop_name"
+          style="
+            width: 50%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+          "
+          required
+        >
+          <option value="">Select Crop Name</option>
+          <option value="Cotton">Cotton</option>
+          <option value="Ginger">Ginger</option>
+          <option value="Gram">Gram</option>
+          <option value="Grapes">Grapes</option>
+          <option value="Groundnut">Groundnut</option>
+          <option value="Jowar">Jowar</option>
+          <option value="Maize">Maize</option>
+          <option value="Masoor">Masoor</option>
+          <option value="Moong">Moong</option>
+          <option value="Rice">Rice</option>
+          <option value="Soybean">Soybean</option>
+          <option value="Sugarcane">Sugarcane</option>
+          <option value="Tur">Tur</option>
+          <option value="Turmeric">Turmeric</option>
+          <option value="Urad">Urad</option>
+          <option value="Wheat">Wheat</option>
+        </select>
+
+        <b>
+          <label for="n"
+            >Nitrogen (N) (enter values between 20 and 150):</label
+          ></b
+        >
+        <input type="number" id="n" name="n" min="20" max="150" required />
+
+        <b
+          ><label for="p"
+            >Phosphorus (P) (enter values between 10 and 90):</label
+          ></b
+        >
+        <input type="number" id="p" name="p" min="10" max="90" required />
+
+        <b>
+          <label for="k">Potassium (K) (enter values between 5 and 150):</label>
+        </b>
+        <input type="number" id="k" name="k" min="5" max="150" required />
+
+        <b>
+          <label for="ph">pH Level (enter values between 5.50 and 8.50):</label>
+        </b>
+        <input
+          type="number"
+          step="0.01"
+          id="ph"
+          name="ph"
+          min="5.50"
+          max="8.50"
+          required
+        />
+        <!-- Predict Button -->
+        <!-- <div class="button-container">
+          <button type="submit">RECOMMENDATION</button>
+        </div> -->
+        <b>
+          <label
+            ><button type="submit">
+              <strong>Predict Fertilizer </strong
+              ><img
+                src="\static\images\fast-forward.png"
+                alt="arrow"
+                height="22px"
+                width="32px"
+              /></button></label
+        ></b>
+      </form>
+
+      <!-- Popup for displaying predicted fertilizer -->
+      <div id="overlay"></div>
+      <div class="popup" id="popupMessage">
+        <button class="close-btn" onclick="closePopup()">×</button>
+        <p id="popupText"></p>
+        <img
+          id="popupImage"
+          src=""
+          alt="fertilizer Image"
+          style="display: none; max-width: 100%; margin-top: 20px"
+        />
+      </div>
+    </main>
+
+    <!-- Link to external JavaScript -->
+    <script src="{{ url_for('static', filename='javascript/script_ferti.js') }}"></script>
+  </body>
+</html>
