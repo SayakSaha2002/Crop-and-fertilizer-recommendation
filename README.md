@@ -2,6 +2,8 @@
 A web-based application that recommends the most suitable crop and fertilizer based on soil and environmental conditions. Built using HTML, CSS, JavaScript (Frontend) and Python with Flask (Backend), and powered by machine learning models.
 
 🎥 [Watch Demo Video](https://youtu.be/0J3xB1wUlqU)
+
+[Live on render](https://crop-and-fertilizer-recommendation-system.onrender.com)
 # 🚀 Features
 🌱 Crop Prediction based on:
 
