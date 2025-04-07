@@ -19,7 +19,7 @@ Temperature
 Rainfall
 
 
-# 🌾 Fertilizer Recommendation based on:
+🌾 Fertilizer Recommendation based on:
 
 Selected crop
 
