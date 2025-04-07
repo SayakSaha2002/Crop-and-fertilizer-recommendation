@@ -1,6 +1,6 @@
 # 🌾 Crop & Fertilizer Recommendation System
 A web-based application that recommends the most suitable crop and fertilizer based on soil and environmental conditions. Built using HTML, CSS, JavaScript (Frontend) and Python with Flask (Backend), and powered by machine learning models.
-
+🎥 [Watch Demo Video](https://youtu.be/0J3xB1wUlqU)
 # 🚀 Features
 🌱 Crop Prediction based on:
 
@@ -120,9 +120,9 @@ Used Label Encoding, MinMax Scaling, and Standard Scaling during preprocessing
 
 # 📸 Snapshots
 Crop prediction
-
+![Image](https://github.com/user-attachments/assets/dda11caa-5b1f-40b6-b27a-12acb141315d)
 Fertilizer recommendation
-
+![Image](https://github.com/user-attachments/assets/53c7a9a7-0cde-4e4a-969c-24198b16b4fb)
 # 👨‍💻 Author
 Sayak Saha
 MCA'2025, Future Institute of Engineering and Management
@@ -130,13 +130,3 @@ MCA'2025, Future Institute of Engineering and Management
 # 📃 License
 This project is licensed under the MIT License – free to use and modify with attribution.
 
-
-
-
-
-
-
-
-
-demo 
-https://youtu.be/0J3xB1wUlqU
